@@ -29,7 +29,7 @@ refer this link to install maven on ubuntu.
 2:And test that application by using junit in test folder.
 3.create your github account and sign in to your account.
 4.push your local project to github account.create branch in github account and do all changes in that new branch only.add Readme file .
-5.after all the changes raise the pull request,after review comment merge the new branch to master branch.
+5.After all the changes raise the pull request,after review comment merge the new branch to master branch.
 
                         Contributors:
 1.vinaya-sacumen.
