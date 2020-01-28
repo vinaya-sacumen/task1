@@ -57,11 +57,11 @@ public class Testclass {
     }
 
 
-
+Employee result2=new Employee(1,12345678,"vi@234");
     @Test
     public void postEmployeeTest() throws Exception
     {
-        // Mockito.when(service.addEmployee(new Employee(4,12345,"@vind"))).thenReturn();
+         Mockito.when(service.addEmployee(new Employee(4,12345,"@vind"))).thenReturn(result2);
         MvcResult mvcResult=mockMvc.perform(MockMvcRequestBuilders.post("/values")).andExpect(MockMvcResultMatchers.status().isOk()).andReturn();
         Employee emp=service.addEmployee();
         Mockito.verify(service).addEmployee();
@@ -69,11 +69,11 @@ public class Testclass {
     }
 
 
-    // String result3=new Employee(1,12345678,"vi@234");
+     String result3=new Employee(1,12345678,"vi@234");
     @Test
     public void updateEmployee() throws Exception
     {
-        // Mockito.when(service.updateEmployee(1)).thenReturn();
+         Mockito.when(service.updateEmployee(1)).thenReturn(result3);
         MvcResult mvcResult=mockMvc.perform(MockMvcRequestBuilders.put("/values/1")).andExpect(MockMvcResultMatchers.status().isOk()).andReturn();
         Employee emp=service.updateEmployee(1);
         Mockito.verify(service).updateEmployee(1);
@@ -81,10 +81,12 @@ public class Testclass {
 
     }
 
+    
+    String result4=new Employee(1,12345678,"vi@234");
     @Test
     public void deleteEmployee() throws Exception
     {
-        Mockito.when(service.deleteEmployee(1)).thenReturn(result1);
+        Mockito.when(service.deleteEmployee(1)).thenReturn(result4);
         MvcResult mvcResult=mockMvc.perform(MockMvcRequestBuilders.delete("/values/1")).andExpect(MockMvcResultMatchers.status().isOk()).andReturn();
         Employee emp=service.deleteEmployee(1);
         Mockito.verify(service).getEmployee(1);
